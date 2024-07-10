@@ -17,22 +17,24 @@
 
 # Hint: the most important part of the problem is how to transform Collatz's idea into a while loop – this is the key to success.
 
-c0 = int(input("Enter your number that is a non-negative or non-zero number:"))
+c0 = -1
 
-# if c0 <= 1:
-#      print("The number you entered was a negative or zero, please try again:")
+while c0 < 1:
+     print("The number you entered was a negative or zero, please try again:")
+     c0 = int(input("Enter your number that is a non-negative or non-zero number:"))
 
-steps = 0 
+steps = 0
 
-while c0 > 1: #checks c0 input is greater than 1
-    if c0 % 2 == 1: #check even number 
-        print(c0 / 2)
-        steps += 1
-    # if c0 % 2 == 1: #first argument checks c0 is even, if true enter while loop
-
+while c0 != 1: #runs while loop until 1 is reached
+    print (c0) #prints c0 current value before next iteration
+    
+    if c0 % 2 == 0: #condition is TRUE if it is an even number
+        c0 = c0 // 2 #divides current c0 by 2
+        
     else:
-        print (c0 * 3+1)
-        steps += 1
-else:
-    print("Steps =", steps)
+        c0 = (c0 * 3) + 1 #if c0 is odd carry out step 3 of the instructions  
+    
+    steps += 1
+
+print("finished in", steps)
 

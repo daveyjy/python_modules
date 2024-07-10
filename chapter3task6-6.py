@@ -14,14 +14,15 @@
 
 my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9] #number list being searched in for loop
 
-non_repeated_list = [] #list that will store repeated elements and will be used as reference for the for loop.
+non_repeated_list = [1] #list that will store repeated elements and will be used as reference for the for loop.
 
 for number in range(len(my_list)): #gives for loop access to my_list elements 0 to -1
     
-    if my_list[number] not in non_repeated_list: #if the current loop number is found in repeated_list condition is true then...
-         
-        non_repeated_list.append(my_list[number])
+    if [number] in non_repeated_list: #if the current loop number is found in repeated_list condition is true then...
+        
+        non_repeated_list.append(number)
         #non_repeated_list.remove(number) #removes current for-loop number from my_list if it is a repetition (true last statement)
+    print(number)   
         
     #else: #if number is unique, and false for if-statement it gets inserted to repeated_list ready to be matched on the next for loop.
      #   repeated_list.append (number)

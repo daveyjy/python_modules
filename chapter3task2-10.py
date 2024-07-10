@@ -16,8 +16,14 @@
 # print the uneaten letters to the screen, each one of them on a separate line.
 # Test your program with the data we've provided for you.
 
+user_word = input("Tell me your word full of vowels?")
+user_word = user_word.upper ()
+
+
 for letter in user_word:
-    
-    user_word = input("Tell me your word full of vowels?")
-    user_word = user_word.upper 
-    continue
+    if letter in ("A","E","I","O","U"):
+        continue
+    else:
+        print(letter,"\n")
+
+#code continued in following lab chapter3task2-11.py
