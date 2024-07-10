@@ -29,5 +29,15 @@ def days_in_month(year,month):
 
 #CODE FROM PREVIOUS LABS ENDS HERE. NEW CODE FOR LAB 4.3.6 BEGINS BELOW
 
-def day_of_year(year, month, day): 
-    if 
+def day_of_year(year, month, day): #new function named day_of_year with 3 args: year, month, day.
+    days = 0
+    for m in range(1, month):
+        # ...
+        # if statement
+            # ...
+        days += md
+    md = days_in_month(year, month)
+    if day >= 1 and day <= md:
+        # ...
+    else:
+        # ...
